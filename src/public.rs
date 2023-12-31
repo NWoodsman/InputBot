@@ -144,6 +144,7 @@ pub enum MouseButton {
     RightButton,
     X1Button,
     X2Button,
+    MouseMove,
 
     #[strum(disabled)]
     OtherButton(u32),
@@ -389,6 +390,7 @@ impl std::fmt::Display for MouseButton {
                 MouseButton::RightButton => "Right Click",
                 MouseButton::X1Button => "Mouse Backward",
                 MouseButton::X2Button => "Mouse Forward",
+                MouseButton::MouseMove=>"Mouse Moved",
                 MouseButton::OtherButton(code) => return write!(f, "{code} Click"),
             }
         )

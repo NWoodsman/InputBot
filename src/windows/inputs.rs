@@ -263,6 +263,7 @@ impl From<MouseButton> for u32 {
             MiddleButton => 0x04,
             X1Button => 0x05,
             X2Button => 0x06,
+            MouseMove =>panic!(),
             OtherButton(code) => code,
         }
     }
